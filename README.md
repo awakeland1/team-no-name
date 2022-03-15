@@ -23,3 +23,5 @@ Discord
 
 ### Preliminary Ideas
 Video game achievement tracking website
+
+**Welcome to class, everyone!  :)**
