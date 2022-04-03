@@ -28,13 +28,16 @@ h1 {
 
 .navbar a.active {
 	background-color: #2c407d;
+	text-shadow: 0 0 10px #FFFFFF;
 }
 
 .navbar a:hover {
 	background-color: dodgerblue;
+	text-shadow: 0 0 10px #FFFFFF;
 }
 
 .navbar a:visited {
 	color: darkblue;
+	text-shadow: 0 0 10px #FFFFFF;
 }
 
