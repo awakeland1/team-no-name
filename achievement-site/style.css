@@ -13,15 +13,16 @@ h1 {
 }
 
 .navbar a {
-	background-color: gray;
+	background-color: transparent;
 	display: block;
-	text-align: left;	
+	text-align: left;
+	text-shadow: 0 0 10px #FFFFFF;
 	border: 2px;
 	padding: 10px 10px;
 	box-shadow: 5px 5px 5px black;
 	float: left;
 	text-decoration: none;
-	text-color: white;
+	text-color: #FFFFFF;
 	font-family: Arial, Verdana, sans-serif;
 }
 
