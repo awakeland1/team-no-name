@@ -31,10 +31,10 @@ h1 {
 }
 
 .navbar a:hover {
-	background-color: white;
+	background-color: dodgerblue;
 }
 
 .navbar a:visited {
-	color: white;
+	color: darkblue;
 }
 
