@@ -41,3 +41,12 @@ h1 {
 	text-shadow: 0 0 10px #FFFFFF;
 }
 
+	#demo {
+-moz-transform: scale(1.2) translate(0px, 25px);
+-webkit-transform: scale(1.2) translate(0px, 25px);
+-o-transform: scale(1.2) translate(0px, 25px);
+-ms-transform: scale(1.2) translate(0px, 25px);
+transform: scale(1.2) translate(0px, 25px);
+}
+
+
