@@ -37,6 +37,7 @@ public class SteamGames extends Application {
 		//Adding top nested object container
 		//Currently this is mainVBox. This will be final unless we need to add GridPane.
 		Scene scene = new Scene(mainVBox);
+		scene.getStylesheets().add("stylesheet.css");
 		
 		mainStage.setScene(scene);
 		mainStage.show();
