@@ -9,13 +9,10 @@ import javafx.scene.layout.VBox;
 import javafx.geometry.Pos;
 
 public class SteamGames extends Application {
-
+	private String textToSearch;
 	@Override
 	public void start(Stage mainStage) throws Exception {
 		// TODO Auto-generated method stub
-		
-		//Button for searching steam games
-		Button searchButton = new Button("Search games");
 		
 		//Textfield to get game user is searching for
 		TextField gameSearchTextField = new TextField();
@@ -26,6 +23,12 @@ public class SteamGames extends Application {
 		Label applicationNameLabel = new Label("Steam game search");
 		Label gameSearchResultLabel = new Label("");
 		
+		//Button for searching steam games
+		Button searchButton = new Button("Search games");
+		searchButton.setOnAction(event -> {
+			gameSearchResultLabel.setText(String.format(gameSearchTextField.getText()));
+		});
+				
 		//hboxes for horizontal placement
 		HBox applicationNameHBox = new HBox(applicationNameLabel);
 		applicationNameHBox.setAlignment(Pos.CENTER);
