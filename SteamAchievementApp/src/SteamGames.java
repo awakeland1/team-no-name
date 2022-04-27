@@ -24,15 +24,17 @@ public class SteamGames extends Application {
 		
 		//Labels
 		Label applicationNameLabel = new Label("Steam game search");
+		Label gameSearchResultLabel = new Label("");
 		
 		//hboxes for horizontal placement
 		HBox applicationNameHBox = new HBox(applicationNameLabel);
 		applicationNameHBox.setAlignment(Pos.CENTER);
 		HBox searchGamesHBox = new HBox(10, gameSearchTextField, searchButton);
+		HBox searchGamesResultHBox = new HBox(10, gameSearchResultLabel);
 		
 		//vboxes for vertical placement.
 		//Build an HBox before this to place similar objects on the same horizontal plane
-		VBox mainVBox = new VBox(10, applicationNameHBox,searchGamesHBox);
+		VBox mainVBox = new VBox(10, applicationNameHBox,searchGamesHBox,searchGamesResultHBox);
 		
 		//Adding top nested object container
 		//Currently this is mainVBox. This will be final unless we need to add GridPane.
