@@ -7,6 +7,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Pos;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class SteamGames extends Application {
 
@@ -41,6 +46,19 @@ public class SteamGames extends Application {
 		mainStage.setScene(scene);
 		mainStage.show();
 		
+	}
+	
+	public ArrayList<Response> OkHttp() throws IOException {
+		
+		OkHttpClient client = new OkHttpClient().newBuilder().build();
+		Request request = new Request.Builder()
+				  .url("http://api.steampowered.com/isteamapps/getapplist/v0002?format=XML")
+				  .method("GET", null)
+				  .build();
+		Response response = client.newCall(request).execute();
+		ArrayList<Response> apiResponse = new ArrayList<Response>();
+		apiResponse.add(response);
+		return apiResponse;
 	}
 
 	public static void main(String[] args) {
