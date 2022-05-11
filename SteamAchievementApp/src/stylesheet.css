@@ -1,0 +1,52 @@
+body {
+	-fx-background-color: #50535c;
+	-fx-background-image: linear-gradient(to 
+	-fx-bottom, #2c407d, darkblue);
+	-fx-background-repeat: no-repeat; }
+h1 {
+	-fx-color: red;
+}
+.navbar { 
+	-fx-overflow: hidden;
+	-fx-background-color: transparent;
+	-fx-border-radius: 10px;
+}
+
+.navbar a {
+	-fx-background-color: transparent;
+	-fx-display: block;
+	-fx-text-align: left;
+	-fx-text-shadow: 0 0 10px #FFFFFF;
+	-fx-border: 2px;
+	-fx-padding: 10px 10px;
+	-fx-box-shadow: 5px 5px 5px black;
+	-fx-float: left;
+	-fx-text-decoration: none;
+	-fx-text-color: #FFFFFF;
+	-fx-font-family: Arial, Verdana, sans-serif;
+}
+
+.navbar a.active {
+	-fx-background-color: #2c407d;
+	-fx-text-shadow: 0 0 10px #FFFFFF;
+}
+
+.navbar a:hover {
+	-fx-background-color: dodgerblue;
+	-fx-text-shadow: 0 0 10px #FFFFFF;
+}
+
+.navbar a:visited {
+	-fx-color: darkblue;
+	-fx-text-shadow: 0 0 10px #FFFFFF;
+}
+
+#demo {
+	-fx--moz-transform: scale(1.2) translate(0px, 25px);
+	-fx--webkit-transform: scale(1.2) translate(0px, 25px);
+	-fx--o-transform: scale(1.2) translate(0px, 25px);
+	-fx--ms-transform: scale(1.2) translate(0px, 25px);
+	-fx-transform: scale(1.2) translate(0px, 25px);
+	-fx-background-color: grey;
+	-fx-text-color: white;
+}
