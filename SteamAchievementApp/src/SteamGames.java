@@ -14,13 +14,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class SteamGames extends Application {
-
+	private String textToSearch;
 	@Override
 	public void start(Stage mainStage) throws Exception {
 		// TODO Auto-generated method stub
-		
-		//Button for searching steam games
-		Button searchButton = new Button("Search games");
 		
 		//Textfield to get game user is searching for
 		TextField gameSearchTextField = new TextField();
@@ -29,15 +26,23 @@ public class SteamGames extends Application {
 		
 		//Labels
 		Label applicationNameLabel = new Label("Steam game search");
+		Label gameSearchResultLabel = new Label("");
 		
+		//Button for searching steam games
+		Button searchButton = new Button("Search games");
+		searchButton.setOnAction(event -> {
+			gameSearchResultLabel.setText(String.format(gameSearchTextField.getText()));
+		});
+				
 		//hboxes for horizontal placement
 		HBox applicationNameHBox = new HBox(applicationNameLabel);
 		applicationNameHBox.setAlignment(Pos.CENTER);
 		HBox searchGamesHBox = new HBox(10, gameSearchTextField, searchButton);
+		HBox searchGamesResultHBox = new HBox(10, gameSearchResultLabel);
 		
 		//vboxes for vertical placement.
 		//Build an HBox before this to place similar objects on the same horizontal plane
-		VBox mainVBox = new VBox(10, applicationNameHBox,searchGamesHBox);
+		VBox mainVBox = new VBox(10, applicationNameHBox,searchGamesHBox,searchGamesResultHBox);
 		
 		//Adding top nested object container
 		//Currently this is mainVBox. This will be final unless we need to add GridPane.
