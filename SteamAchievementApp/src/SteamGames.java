@@ -28,6 +28,8 @@ public class SteamGames extends Application {
 		Label applicationNameLabel = new Label("Steam game search");
 		Label gameSearchResultLabel = new Label("");
 		
+		ArrayList gameList = new ArrayList<Response>();
+		gameList.addAll(OkHttp());
 		//Button for searching steam games
 		Button searchButton = new Button("Search games");
 		searchButton.setOnAction(event -> {
